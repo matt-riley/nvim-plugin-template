@@ -17,6 +17,11 @@
 
 - Neovim 0.8+
 
+## Versioning
+
+- Canonical project version is stored in [`VERSION`](VERSION).
+- `release-please` updates both `VERSION` and `CHANGELOG.md`.
+
 ## Installation
 
 ```lua
@@ -99,6 +104,18 @@ make lint
 make format        # auto-format
 make format-check  # check only (CI uses this)
 ```
+
+### Documentation (`:help`)
+
+Plugin help is generated from Lua annotations in `lua/myplugin/init.lua` using
+[mini.doc](https://github.com/nvim-mini/mini.doc):
+
+```bash
+make docs
+```
+
+`make docs` injects the current value from [`VERSION`](VERSION) into the
+generated vim help file.
 
 ## License
 
