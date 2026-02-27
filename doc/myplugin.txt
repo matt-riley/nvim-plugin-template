@@ -1,7 +1,7 @@
                                                                       *myplugin*
 myplugin.nvim
 
-Version: 0.1.0
+Version: 0.1.1
 
 A minimal Neovim plugin template with typed configuration and a simple API.
 
