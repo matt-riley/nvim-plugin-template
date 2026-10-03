@@ -6,4 +6,9 @@ on:
 
 jobs:
   format:
-    uses: matt-riley/matt-riley-ci/.github/workflows/nvim-format.yml@79d1429b30c0384307c03522c9c5c84eb11b5f69 # main
+    permissions:
+      contents: read
+    concurrency:
+      group: ${{ github.workflow }}:${{ github.ref }}:format
+      cancel-in-progress: true
+    uses: matt-riley/matt-riley-ci/.github/workflows/nvim-format.yml@cb986078a5bd4775e5fb05348f3618e41fedf4de # v4
